@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>bundleid</key>
-	<string>com.joeynotjoe.linear-issue-maker</string>
+	<string>com.mattalexanderfields.linear-issue-maker</string>
 	<key>connections</key>
 	<dict>
 		<key>3B17DD17-7838-45DF-BD85-C392E29FAF08</key>
@@ -23,7 +23,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>4379A382-45DC-4CC5-84FC-32D98E93A95A</string>
+				<string>DB4AD685-8B6C-44E8-B0BA-6687CD550E5E</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -37,6 +37,31 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>7D78555A-34C8-4100-A146-461AC2E0F2A8</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>DB4AD685-8B6C-44E8-B0BA-6687CD550E5E</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>4379A382-45DC-4CC5-84FC-32D98E93A95A</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>78C8DAA4-D603-45C4-8D26-4EE737E50FF1</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>751DCB00-1FBB-4F3D-91BE-DD6749B72F46</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -87,7 +112,16 @@
 				<key>script</key>
 				<string>query=$1
 
-python3 ./main.py "$query"</string>
+python3 ./main.py "$query"
+
+if [ $? -eq 0 ]; then
+    export alfred_script_status="success"
+else
+    export alfred_script_status="failure"
+fi
+
+
+echo -n "$alfred_script_status"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -126,6 +160,38 @@ python3 ./main.py "$query"</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
+						<string></string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>success</string>
+						<key>outputlabel</key>
+						<string>success</string>
+						<key>uid</key>
+						<string>78C8DAA4-D603-45C4-8D26-4EE737E50FF1</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string>fail</string>
+				<key>hideelse</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.conditional</string>
+			<key>uid</key>
+			<string>DB4AD685-8B6C-44E8-B0BA-6687CD550E5E</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>argument</key>
 				<string>{query}</string>
 				<key>passthroughargument</key>
@@ -143,15 +209,74 @@ python3 ./main.py "$query"</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>Not Created: {var:initial_query}</string>
+				<key>title</key>
+				<string>Issue Creation Failed</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>751DCB00-1FBB-4F3D-91BE-DD6749B72F46</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 	</array>
 	<key>readme</key>
-	<string># Workflow Name
+	<string># Linear Issue Maker
 
-## ReadMe
+## Description
 
-## Changelog
-YYYY.MM.DD | version
-	•</string>
+Welcome to the wonderful world of entering Linear issues from the Alfred interface. Just enter your keyword (default is "li") and type in the title of the issue you'd like to create. At this time, the code is limited to just creating backlog items not assigned to specific projects for ease of use. 
+
+## Configuration
+
+Both your personal API key and team id are required. The instructions to set this up are as follows:
+
+- API Key
+1. Navigate to https://linear.app/ and login to your Linear account
+3. Type "G" then "S". This will open your account settings
+4. Select API under "My Account" on the left
+5. Create a personal API key, naming it whatever you'd like. This will generate the API key you will enter in the workflow configuration.
+
+- Team ID
+1. While logged in to your Linear account, type "Cmd-k" and enter "UUID" in the popup window
+2. Select "Developer: Copy Model UUID..."
+3. Type "team" and select the team name you would like your issues to go to. This will copy the ID you will enter in the workflow configuration.
+
+
+## Usage
+
+The keyword to enter into Alfred is defaulted to "li". Feel free to change it by selecting the keyword object in the workflow.
+Just type "li" followed by the title of your issue and hit enter. Easy peasey. 
+
+
+## Contributing
+
+If you would like to contribute to this project, please follow these guidelines:
+
+1. Fork the repository.
+2. Create a new branch for your changes.
+3. Make your changes.
+4. Commit your changes.
+5. Push your changes to your forked repository.
+6. Submit a pull request.
+
+Clone the repo with https://github.com/mattalexanderfields/Alfred_wf_Linear.git
+
+
+## Contact
+
+If you have any questions, please contact me at theseapriest@gmail.com</string>
 	<key>uidata</key>
 	<dict>
 		<key>3B17DD17-7838-45DF-BD85-C392E29FAF08</key>
@@ -164,9 +289,16 @@ YYYY.MM.DD | version
 		<key>4379A382-45DC-4CC5-84FC-32D98E93A95A</key>
 		<dict>
 			<key>xpos</key>
-			<real>450</real>
+			<real>585</real>
 			<key>ypos</key>
 			<real>250</real>
+		</dict>
+		<key>751DCB00-1FBB-4F3D-91BE-DD6749B72F46</key>
+		<dict>
+			<key>xpos</key>
+			<real>580</real>
+			<key>ypos</key>
+			<real>380</real>
 		</dict>
 		<key>7D78555A-34C8-4100-A146-461AC2E0F2A8</key>
 		<dict>
@@ -181,6 +313,13 @@ YYYY.MM.DD | version
 			<real>210</real>
 			<key>ypos</key>
 			<real>280</real>
+		</dict>
+		<key>DB4AD685-8B6C-44E8-B0BA-6687CD550E5E</key>
+		<dict>
+			<key>xpos</key>
+			<real>455</real>
+			<key>ypos</key>
+			<real>270</real>
 		</dict>
 	</dict>
 	<key>userconfigurationconfig</key>
@@ -228,6 +367,8 @@ YYYY.MM.DD | version
 			<string>TEAM_ID</string>
 		</dict>
 	</array>
+	<key>variablesdontexport</key>
+	<array/>
 	<key>version</key>
 	<string>0.0.01</string>
 	<key>webaddress</key>
