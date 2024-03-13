@@ -3,10 +3,10 @@ import requests
 import json
 
 # Replace with your Linear API key
-API_KEY = "lin_api_5dLIdd7nawqiLplplvXe1EHqwpvzTjLleWv4tzXa"
+API_KEY = "insert key here"
 
 # Replace with your Linear team ID
-TEAM_ID = "21ebf514-d232-44a3-a413-aea8ff91b4ec"
+TEAM_ID = "insert id here"
 
 def create_issue(title):
     url = f"https://api.linear.app/graphql"
