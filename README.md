@@ -103,7 +103,7 @@ To set up the project you need only go to Alfred settings, click on workflows on
 
 ### Installation
 
-1. Go to the <a href="[Alfred-url]">Alfred Homepage</a>
+1. Go to the <a href="https://www.alfredapp.com/">Alfred Homepage</a>
 2. Select the "Alfred Gallery" tab
 3. Search for Linear
 4. Find Alfred Linear Workflow
