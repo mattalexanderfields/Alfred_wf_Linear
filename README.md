@@ -91,7 +91,7 @@ What better way to open your Linear project issues than to use Alfred. This work
 
 ### Built With
 
-* [![Alfred][Alfred-shield]][Alfred-url]
+[![Alfred][Alfred-shield]][Alfred-url]
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
