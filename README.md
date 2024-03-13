@@ -83,9 +83,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `mattalexanderfields`, `Alfred_wf_Linear`, `theseapriest`, `linkedin_username`, `gmail`, `theseapriest`, `Linear Workflow for Alfred`, `Create issues from the Alfred UI`
+What better way to open your Linear project issues than to use Alfred. This workflow does just that. Link your Linear account and send all those pesky issues as they come up. 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -93,14 +91,8 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 
 ### Built With
 
-* [![Next][Next.js]][Next-url]
-* [![React][React.js]][React-url]
-* [![Vue][Vue.js]][Vue-url]
-* [![Angular][Angular.io]][Angular-url]
-* [![Svelte][Svelte.dev]][Svelte-url]
-* [![Laravel][Laravel.com]][Laravel-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
+* [![Alfred][Alfred-shield]][Alfred-url]
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -109,32 +101,15 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+To set up the project you need only go to Alfred settings, click on workflows on the left side, then select the Alfred Gallery. There you'll find all sorts of goodies, including this one when you search Linear. 
 
-### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/mattalexanderfields/Alfred_wf_Linear.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
+1. Go to the [https://alfred.app/](Alfred Homepage)
+2. Select the "Alfred Gallery" tab
+3. Search for Linear
+4. Find Alfred Linear Workflow
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -229,6 +204,8 @@ Project Link: [https://github.com/mattalexanderfields/Alfred_wf_Linear](https://
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/linkedin_username
 [product-screenshot]: images/screenshot.png
+[Alfred-url]: https://www.alfredapp.com/
+[Alfred-shield]: https://img.shields.io/badge/alfred-black?style=for-the-badge&logo=alfred&logoColor=%235C1F87
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
