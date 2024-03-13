@@ -1,12 +1,18 @@
 import sys
 import requests
 import json
+import os
+
+api = os.environ.get("API_KEY")
+team = os.environ.get("TEAM_ID")
+
+
 
 # Replace with your Linear API key
-API_KEY = "insert key here"
+API_KEY = api
 
 # Replace with your Linear team ID
-TEAM_ID = "insert id here"
+TEAM_ID = team
 
 def create_issue(title):
     url = f"https://api.linear.app/graphql"

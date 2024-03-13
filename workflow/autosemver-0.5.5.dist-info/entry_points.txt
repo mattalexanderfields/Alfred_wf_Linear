@@ -1,0 +1,6 @@
+[console_scripts]
+autosemver = autosemver:main
+
+[distutils.setup_keywords]
+autosemver = autosemver:distutils
+bugtracker_url = autosemver:distutils

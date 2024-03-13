@@ -59,27 +59,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argumenttype</key>
-				<integer>0</integer>
-				<key>keyword</key>
-				<string>li</string>
-				<key>subtext</key>
-				<string></string>
-				<key>text</key>
-				<string>Create a new issue in Linear</string>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>3B17DD17-7838-45DF-BD85-C392E29FAF08</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>lastpathcomponent</key>
 				<false/>
 				<key>onlyshowifquerypopulated</key>
@@ -122,6 +101,27 @@ python3 ./main.py "$query"</string>
 			<string>7D78555A-34C8-4100-A146-461AC2E0F2A8</string>
 			<key>version</key>
 			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>li</string>
+				<key>subtext</key>
+				<string></string>
+				<key>text</key>
+				<string>Create a new issue in Linear</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>3B17DD17-7838-45DF-BD85-C392E29FAF08</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -184,9 +184,50 @@ YYYY.MM.DD | version
 		</dict>
 	</dict>
 	<key>userconfigurationconfig</key>
-	<array/>
-	<key>variablesdontexport</key>
-	<array/>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string></string>
+				<key>placeholder</key>
+				<string>Key Here</string>
+				<key>required</key>
+				<true/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>You can create a key by going to your linear account, going into settings, and selecting API</string>
+			<key>label</key>
+			<string>Your API Key</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>API_KEY</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string></string>
+				<key>placeholder</key>
+				<string>ID Here</string>
+				<key>required</key>
+				<true/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>Enter Cmd-K in Linear, then search for UUID. Select Copy Model UUID, then find the team you want your issues to go to.</string>
+			<key>label</key>
+			<string>Your Team ID</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>TEAM_ID</string>
+		</dict>
+	</array>
 	<key>version</key>
 	<string>0.0.01</string>
 	<key>webaddress</key>

@@ -1,0 +1,16 @@
+../../bin/autosemver,sha256=kqqi4_TYprzrP0W11if4e-zmpVdZGlO-9vJnYbTDJ7c,258
+autosemver-0.5.5.dist-info/AUTHORS,sha256=2Ohe7DhgdthfUrsNiOIdFB0IppDMKOnOF1a3xpaJ-jg,202
+autosemver-0.5.5.dist-info/INSTALLER,sha256=zuuue4knoyJ-UwPPXg8fezS7VCrXJQrAP7zeNuwvFQg,4
+autosemver-0.5.5.dist-info/METADATA,sha256=JbAhFaoxOjWLUgQuXdLulPIopbeJJ_GNtV6IGCVmDoo,339
+autosemver-0.5.5.dist-info/RECORD,,
+autosemver-0.5.5.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+autosemver-0.5.5.dist-info/entry_points.txt,sha256=EkC64AB613rIhe79Kg30-KXsmv9Xbv4uKtXPPnrF1gg,147
+autosemver-0.5.5.dist-info/top_level.txt,sha256=haJ9kbTTNWTIvm4qtTwTxwLYp7c3LAhyv_Jh0ZUJWK8,11
+autosemver/__init__.py,sha256=KkhO0T1Gcca-qcGSAV4Bx9t8GGFKj0QIDmnzbscRCPU,5313
+autosemver/__pycache__/__init__.cpython-312.pyc,,
+autosemver/__pycache__/api.cpython-312.pyc,,
+autosemver/__pycache__/git.cpython-312.pyc,,
+autosemver/__pycache__/packaging.cpython-312.pyc,,
+autosemver/api.py,sha256=Z50AHIBuPJa1WFGjlTEIrwHvzZh7cjDulZ5yMWePbiQ,12822
+autosemver/git.py,sha256=vtRff2juAf_lfnxhAphe6KrgW4-cyL6AVluTSS03MYg,13001
+autosemver/packaging.py,sha256=r8s6wh6TvHRv2jzc8VQ69-0n4LF-aSYDpweNARvdv-c,8139

@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: autosemver
+Version: 0.5.5
+Summary: Tools to handle automatic semantic versioning in python
+Home-page: https://github.com/david-caro/python-autosemver
+Author: David Caro
+Author-email: david@dcaro.es
+License: GPLv3
+Description-Content-Type: text/x-rst
+License-File: AUTHORS
+Requires-Dist: dulwich <0.20,>=0.19.6
+
