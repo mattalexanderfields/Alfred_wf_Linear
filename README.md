@@ -22,8 +22,6 @@
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
 
 
 
@@ -72,7 +70,6 @@
     <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
@@ -106,7 +103,7 @@ To set up the project you need only go to Alfred settings, click on workflows on
 
 ### Installation
 
-1. Go to the [https://alfred.app/](Alfred Homepage)
+1. Go to the <a href="[Alfred-url]">Alfred Homepage</a>
 2. Select the "Alfred Gallery" tab
 3. Search for Linear
 4. Find Alfred Linear Workflow
