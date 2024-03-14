@@ -8,7 +8,7 @@ import os
 # Priority mapping
 PRIORITY_MAP = {
     "l": 4,
-    "n": 3,
+    "m": 3,
     "h": 2,
     "u": 1
 }
@@ -16,7 +16,6 @@ PRIORITY_MAP = {
 
 API_KEY = os.environ.get("API_KEY")
 TEAM_ID = os.environ.get("TEAM_ID")
-
 
 
 def create_issue(title, priority):
