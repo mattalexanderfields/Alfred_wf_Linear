@@ -175,10 +175,10 @@ The Linear Issue Maker workflow allows you to quickly create new issues in your 
 If you need any help configuring or using the Linear Issue Maker workflow, you can check the official Alfred Forum for support from the community.[2][4]
 
 Citations:
-[1] https://linear.app/docs/configuring-workflows
-[2] https://www.alfredapp.com/workflows/
-[3] https://linear.app
-[4] https://www.alfredapp.com/blog/guides-and-tutorials/create-your-own-workflows/
+<p>[1] https://linear.app/docs/configuring-workflows</p>
+<p>[2] https://www.alfredapp.com/workflows/</p>
+<p>[3] https://linear.app</p>
+<p>[4] https://www.alfredapp.com/blog/guides-and-tutorials/create-your-own-workflows/</p>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
