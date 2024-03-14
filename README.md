@@ -181,7 +181,7 @@ The workflow will automatically create a new linear issue with the provided titl
 ### Examples
 
 - `li Add support for dark mode` - Creates a new issue titled "Add support for dark mode".
-- `li Fix bug in login flow: Users are unable to reset their passwords` - Creates a new issue with the detailed description.
+- `li Fix bug in login flow -u` - Creates a new issue with the priority urgent.
 
 You can also use the `li` keyword without any text to open the linear web app directly. (implemented in v1.1.0)
 
