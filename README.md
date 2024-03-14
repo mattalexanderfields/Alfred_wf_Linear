@@ -35,7 +35,7 @@
 <h3 align="center">Linear Workflow for Alfred</h3>
 
   <p align="center">
-    Create issues from the Alfred UI
+    Create Linear issues from the Alfred UI
     <br />
     <a href="https://github.com/mattalexanderfields/Alfred_wf_Linear"><strong>Explore the docs »</strong></a>
     <br />
