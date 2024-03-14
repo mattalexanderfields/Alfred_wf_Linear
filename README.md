@@ -85,19 +85,19 @@ This Alfred Workflow is designed to make it easy to create new issues directly f
 
 Here's a more detailed overview of what this workflow enables:
 
-<b>Link Your Linear Account</b>
+<b> - Link Your Linear Account</b>
 
 The workflow allows you to authenticate and link your Linear account credentials. This connects Alfred to your Linear projects and workspaces.
 
-<b>Create New Issues Quickly</b>
+<b> - Create New Issues Quickly</b>
 
 With a simple keyword or hotkey, you can bring up the workflow and start creating a new issue. The workflow will prompt you for the issue title
 
-<b>Send Issues Instantly</b>
+<b> - Send Issues Instantly</b>
 
 Once you've entered all the details, the workflow will instantly create the new issue in your linked Linear team. No more context switching or manual entry.
 
-<b>Increased Productivity</b>
+<b> - Increased Productivity</b>
 
 By reducing the friction to create and track issues, this workflow aims to boost your productivity. You can capture issues and ideas as they occur, without losing focus or context on your current task.
 
