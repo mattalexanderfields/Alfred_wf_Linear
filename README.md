@@ -40,7 +40,6 @@
     <a href="https://github.com/mattalexanderfields/Alfred_wf_Linear"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/mattalexanderfields/Alfred_wf_Linear">View Demo</a>
     ·
     <a href="https://github.com/mattalexanderfields/Alfred_wf_Linear/issues">Report Bug</a>
     ·
