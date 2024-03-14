@@ -182,7 +182,7 @@ The workflow will automatically create a new linear issue with the provided titl
 - `li Add support for dark mode` - Creates a new issue titled "Add support for dark mode".
 - `li Fix bug in login flow: Users are unable to reset their passwords` - Creates a new issue with the detailed description.
 
-You can also use the `li` keyword without any text to open the linear web app directly. (not yet implemented)
+You can also use the `li` keyword without any text to open the linear web app directly. (implemented in v1.1.0)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
