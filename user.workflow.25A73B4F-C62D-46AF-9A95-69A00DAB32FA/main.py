@@ -3,18 +3,23 @@ import requests
 import json
 import os
 
-api = os.environ.get("API_KEY")
-team = os.environ.get("TEAM_ID")
+
+
+# Priority mapping
+PRIORITY_MAP = {
+    "l": 4,
+    "n": 3,
+    "h": 2,
+    "u": 1
+}
+
+
+API_KEY = os.environ.get("API_KEY")
+TEAM_ID = os.environ.get("TEAM_ID")
 
 
 
-# Replace with your Linear API key
-API_KEY = api
-
-# Replace with your Linear team ID
-TEAM_ID = team
-
-def create_issue(title):
+def create_issue(title, priority):
     url = f"https://api.linear.app/graphql"
     headers = {
         "Authorization": f"{API_KEY}",
@@ -26,6 +31,7 @@ def create_issue(title):
                 issue {
                     id
                     title
+                    priority
                 }
             }
         }
@@ -33,19 +39,31 @@ def create_issue(title):
     variables = {
         "input": {
             "teamId": TEAM_ID,
-            "title": title
+            "title": title,
+            "priority": priority
         }
     }
     payload = {"query": query, "variables": variables}
     response = requests.post(url, headers=headers, json=payload)
     return response.json()
 
-def main(query):
+def main(query, priority):
     title = query
-    result = create_issue(title)
+    prio = PRIORITY_MAP.get(priority.lower(), 0)
+    result = create_issue(title, prio)
     issue = result["data"]["issueCreate"]["issue"]
     issue_url = f"https://linear.app/team/{TEAM_ID}/issue/{issue['id']}"
-    sys.stderr.write(f"New issue created: {issue['title']} ({issue_url})")
+    #sys.stdout.write(f"New issue created: {issue['title']} ({issue_url})")
 
-query = sys.argv[1]
-main(query)
+
+if __name__ == "__main__":
+    string_input = sys.argv[1]
+    split_string = string_input.split('-')
+    query = split_string[0]
+    if len(split_string) > 1:
+        priority = split_string[1]
+    else:
+        priority = "None"
+
+
+    main(query,priority)

@@ -4,6 +4,8 @@
 <dict>
 	<key>bundleid</key>
 	<string>com.mattalexanderfields.linear-issue-maker</string>
+	<key>category</key>
+	<string>Productivity</string>
 	<key>connections</key>
 	<dict>
 		<key>10CCFAEE-35B2-440D-8585-6547E567BEDB</key>
@@ -381,7 +383,8 @@ The default keyword to trigger the workflow is "li". To create a new issue:
 
 1. Type "li" followed by a space
 2. Enter the title of the issue
-3. Press Enter
+3. Optionally add a priority after the title using -u, -h, -m -l for urgent, high, medium, or low
+4. Press Enter
 
 The new issue will be created as a backlog item in the specified Linear team.
 
@@ -520,7 +523,7 @@ If you have any questions or issues, please contact me at theseapriest@gmail.com
 	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
-	<string>1.0.1</string>
+	<string>1.2.0</string>
 	<key>webaddress</key>
 	<string>https://github.com/mattalexanderfields</string>
 </dict>
