@@ -80,7 +80,25 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-What better way to open your Linear project issues than to use Alfred. This workflow does just that. Link your Linear account and send all those pesky issues as they come up. 
+Linear is a modern issue tracking and project management tool that helps software teams ship better products, faster. It provides a streamlined interface for tracking issues, managing projects, and collaborating with your team.
+
+This Alfred Workflow is designed to make it easy to create new issues directly from Alfred (a productivity application for macOS) and send them to your Linear account. Instead of having to switch to the Linear web app or manually create issues, you can quickly capture and send issues as they come up, right from your desktop.
+
+Here's a more detailed overview of what this workflow enables:
+
+Link Your Linear Account
+The workflow allows you to authenticate and link your Linear account credentials. This connects Alfred to your Linear projects and workspaces.
+
+Create New Issues Quickly
+With a simple keyword or hotkey, you can bring up the workflow and start creating a new issue. The workflow will prompt you for the issue title
+
+Send Issues Instantly
+Once you've entered all the details, the workflow will instantly create the new issue in your linked Linear team. No more context switching or manual entry.
+
+Increased Productivity
+By reducing the friction to create and track issues, this workflow aims to boost your productivity. You can capture issues and ideas as they occur, without losing focus or context on your current task.
+
+The overall goal is to provide a seamless way to integrate Linear's powerful issue tracking capabilities into your existing workflow, leveraging Alfred's speed and accessibility. This can be particularly useful for developers, QA engineers, project managers, or anyone who needs to frequently create and manage issues or tasks within their software development lifecycle.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -89,6 +107,8 @@ What better way to open your Linear project issues than to use Alfred. This work
 ### Built With
 
 [![Alfred][Alfred-shield]][Alfred-url]
+[![Python][Python-shield]][Python-url]
+
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -96,28 +116,90 @@ What better way to open your Linear project issues than to use Alfred. This work
 
 
 <!-- GETTING STARTED -->
+
 ## Getting Started
 
-To set up the project you need only go to Alfred settings, click on workflows on the left side, then select the Alfred Gallery. There you'll find all sorts of goodies, including this one when you search Linear. 
+1. **Open Alfred Preferences**
+   - Launch the Alfred app on your Mac.
+   - Click on the "Alfred Preferences" menu option or use the keyboard shortcut `cmd + ,` to open the preferences window.
+
+2. **Navigate to the Workflows Section**
+   - In the preferences window, click on the "Workflows" tab located on the left sidebar.
+
+3. **Open the Alfred Gallery**
+   - In the Workflows section, click on the "Add Workflow" button at the bottom.
+   - This will open the Alfred Gallery, which is a collection of community-created workflows that you can install.
+
+4. **Search for the Linear Issue Maker**
+   - In the search bar at the top of the Alfred Gallery, type "Linear Issue Maker" to find the workflow.
+   - The Linear Issue Maker should appear in the search results.
+
+5. **Install the Linear Issue Maker**
+   - Click on the "Install" button next to the Linear Issue Maker to begin the installation process.
+   - Alfred may prompt you to grant certain permissions or provide your system password to complete the installation.
+
+6. **Configure the Linear Issue Maker**
+   - After installation, the Linear Issue Maker will be listed in the Workflows section of Alfred Preferences.
+   - Click on the Linear Issue Maker to view its configuration options.
+   - You will need to provide your personal API key and team UUID from Linear to authenticate and connect the workflow.
+   - Follow the instructions within the workflow to enter these credentials.
+
+7. **Start Using the Linear Issue Maker**
+   - Once configured, you can invoke the Linear Issue Maker by typing the designated keyword (e.g., "linear issue") in Alfred's search bar.
+   - The workflow will provide actions and features related to creating new issues in Linear directly from Alfred.
+
+Please note that providing your personal API key and team UUID is a required step to ensure the Linear Issue Maker can authenticate and interact with your Linear account and team correctly.
+
+
 
 
 ### Installation
 
-1. Go to the <a href="https://www.alfredapp.com/">Alfred Homepage</a>
+1. Go to the [Alfred Homepage](https://www.alfredapp.com/)[1]
 2. Select the "Alfred Gallery" tab
-3. Search for Linear
-4. Find Alfred Linear Workflow
+3. Search for "linear issue maker" in the Alfred Gallery search bar  
+4. Find the "Linear Issue Maker Workflow" in the search results
+5. Click the "Install" button next to the Linear Issue Maker workflow
+6. Alfred will prompt you to confirm installing the workflow. Click "Install" to proceed.
+7. Once installed, you can configure the Linear Issue Maker workflow by:
+   - Right-clicking on the workflow name in Alfred's sidebar and selecting "Configure..."[2]
+   - Or clicking "Configure Workflow..." under the workflow's name in Alfred Preferences[2]
+8. Follow any configuration prompts to set up required settings like your Linear API key, project, etc.[1][3]
+
+The Linear Issue Maker workflow allows you to quickly create new issues in your Linear project from Alfred. By configuring it with your Linear account details, you can streamline your issue tracking workflow directly from Alfred's launcher.[1][3]
+
+If you need any help configuring or using the Linear Issue Maker workflow, you can check the official Alfred Forum for support from the community.[2][4]
+
+Citations:
+[1] https://linear.app/docs/configuring-workflows
+[2] https://www.alfredapp.com/workflows/
+[3] https://linear.app
+[4] https://www.alfredapp.com/blog/guides-and-tutorials/create-your-own-workflows/
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
 <!-- USAGE EXAMPLES -->
+
+
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+This Alfred workflow allows you to quickly create linear issues from your desktop using a simple keyword and text input.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+1. Invoke the workflow by typing the keyword `li` followed by a space.
+2. Enter the title or description of the issue you want to create.
+3. Press `Enter` to submit the input.
+
+The workflow will automatically create a new linear issue with the provided title or description.
+
+### Examples
+
+- `li Add support for dark mode` - Creates a new issue titled "Add support for dark mode".
+- `li Fix bug in login flow: Users are unable to reset their passwords` - Creates a new issue with the detailed description.
+
+You can also use the `li` keyword without any text to open the linear web app directly. (not yet implemented)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -125,11 +207,6 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 <!-- ROADMAP -->
 ## Roadmap
-
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
 
 See the [open issues](https://github.com/mattalexanderfields/Alfred_wf_Linear/issues) for a full list of proposed features (and known issues).
 
@@ -160,7 +237,7 @@ Don't forget to give the project a star! Thanks again!
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@theseapriest](https://twitter.com/theseapriest) - theseapriest@gmail.com
+[@theseapriest](https://twitter.com/theseapriest) - theseapriest@gmail.com
 
 Project Link: [https://github.com/mattalexanderfields/Alfred_wf_Linear](https://github.com/mattalexanderfields/Alfred_wf_Linear)
 
@@ -171,9 +248,8 @@ Project Link: [https://github.com/mattalexanderfields/Alfred_wf_Linear](https://
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-* []()
-* []()
-* []()
+* [joeynotjoe](https://github.com/joeynotjoe) for fixing major headaches
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -196,6 +272,8 @@ Project Link: [https://github.com/mattalexanderfields/Alfred_wf_Linear](https://
 [product-screenshot]: images/screenshot.png
 [Alfred-url]: https://www.alfredapp.com/
 [Alfred-shield]: https://img.shields.io/badge/alfred-black?style=for-the-badge&logo=alfred&logoColor=%235C1F87
+[Python-url]: https://www.python.org/
+[Python-shield]: https://img.shields.io/badge/python-black?style=for-the-badge&logo=python&logoColor=%235C1F87
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
