@@ -173,7 +173,8 @@ This Alfred workflow allows you to quickly create linear issues from your deskto
 
 1. Invoke the workflow by typing the keyword `li` followed by a space.
 2. Enter the title or description of the issue you want to create.
-3. Press `Enter` to submit the input.
+3. Optionally enter priority after the title using -u, -h, -m, -l for urgent, high, medium, or low (introduced in v1.2.0)
+4. Press `Enter` to submit the input.
 
 The workflow will automatically create a new linear issue with the provided title or description.
 
