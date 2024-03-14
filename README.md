@@ -122,32 +122,18 @@ The overall goal is to provide a seamless way to integrate Linear's powerful iss
 
 ## Getting Started
 
-1. **Open Alfred Preferences**
-   - Launch the Alfred app on your Mac.
-   - Click on the "Alfred Preferences" menu option or use the keyboard shortcut `cmd + ,` to open the preferences window.
 
-2. **Navigate to the Workflows Section**
-   - In the preferences window, click on the "Workflows" tab located on the left sidebar.
-
-3. **Open the Alfred Gallery**
-   - In the Workflows section, click on the "Add Workflow" button at the bottom.
-   - This will open the Alfred Gallery, which is a collection of community-created workflows that you can install.
-
-4. **Search for the Linear Issue Maker**
-   - In the search bar at the top of the Alfred Gallery, type "Linear Issue Maker" to find the workflow.
-   - The Linear Issue Maker should appear in the search results.
-
-5. **Install the Linear Issue Maker**
-   - Click on the "Install" button next to the Linear Issue Maker to begin the installation process.
+1. **Install the Linear Issue Maker**
+   - Download Linear Issue Maker.alfredworkflow from the repo (not yet accepted into Alfred gallery) and double click to install
    - Alfred may prompt you to grant certain permissions or provide your system password to complete the installation.
 
-6. **Configure the Linear Issue Maker**
+2. **Configure the Linear Issue Maker**
    - After installation, the Linear Issue Maker will be listed in the Workflows section of Alfred Preferences.
    - Click on the Linear Issue Maker to view its configuration options.
    - You will need to provide your personal API key and team UUID from Linear to authenticate and connect the workflow.
    - Follow the instructions within the workflow to enter these credentials.
 
-7. **Start Using the Linear Issue Maker**
+3. **Start Using the Linear Issue Maker**
    - Once configured, you can invoke the Linear Issue Maker by typing the designated keyword (e.g., "linear issue") in Alfred's search bar.
    - The workflow will provide actions and features related to creating new issues in Linear directly from Alfred.
 
