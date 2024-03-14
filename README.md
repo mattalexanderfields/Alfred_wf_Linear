@@ -97,7 +97,7 @@ With a simple keyword or hotkey, you can bring up the workflow and start creatin
 
 Once you've entered all the details, the workflow will instantly create the new issue in your linked Linear team. No more context switching or manual entry.
 
-<b> - Increased Productivity</b>
+<b> -Increased Productivity</b>
 
 By reducing the friction to create and track issues, this workflow aims to boost your productivity. You can capture issues and ideas as they occur, without losing focus or context on your current task.
 
@@ -158,12 +158,7 @@ Please note that providing your personal API key and team UUID is a required ste
 
 ### Installation
 
-1. Go to the [Alfred Homepage](https://www.alfredapp.com/)[1]
-2. Select the "Alfred Gallery" tab
-3. Search for "linear issue maker" in the Alfred Gallery search bar  
-4. Find the "Linear Issue Maker Workflow" in the search results
-5. Click the "Install" button next to the Linear Issue Maker workflow
-6. Alfred will prompt you to confirm installing the workflow. Click "Install" to proceed.
+1. Download the Linear Issue Maker.alfredworkflow file from the repo and execute to install into Alfred
 7. Once installed, you can configure the Linear Issue Maker workflow by:
    - Right-clicking on the workflow name in Alfred's sidebar and selecting "Configure..."[2]
    - Or clicking "Configure Workflow..." under the workflow's name in Alfred Preferences[2]
