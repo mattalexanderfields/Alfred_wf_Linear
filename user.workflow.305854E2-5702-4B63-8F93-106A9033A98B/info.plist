@@ -6,7 +6,45 @@
 	<string>com.mattalexanderfields.linear-issue-maker</string>
 	<key>connections</key>
 	<dict>
+		<key>10CCFAEE-35B2-440D-8585-6547E567BEDB</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>2B4B4C4B-91E6-40E8-9C54-02D44AA54A14</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>78C8DAA4-D603-45C4-8D26-4EE737E50FF1</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>45D49E96-8CBA-4DBD-97AC-206A5E413D9E</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>3B17DD17-7838-45DF-BD85-C392E29FAF08</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>10CCFAEE-35B2-440D-8585-6547E567BEDB</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>45D49E96-8CBA-4DBD-97AC-206A5E413D9E</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
@@ -84,6 +122,48 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>skipqueryencode</key>
+				<false/>
+				<key>skipvarencode</key>
+				<false/>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>https://linear.app/</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>2B4B4C4B-91E6-40E8-9C54-02D44AA54A14</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>li</string>
+				<key>subtext</key>
+				<string></string>
+				<key>text</key>
+				<string>Go to Linear.app</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>3B17DD17-7838-45DF-BD85-C392E29FAF08</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>lastpathcomponent</key>
 				<false/>
 				<key>onlyshowifquerypopulated</key>
@@ -99,6 +179,27 @@
 			<string>alfred.workflow.output.notification</string>
 			<key>uid</key>
 			<string>4379A382-45DC-4CC5-84FC-32D98E93A95A</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>li</string>
+				<key>subtext</key>
+				<string></string>
+				<key>text</key>
+				<string>Log an Issue</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>45D49E96-8CBA-4DBD-97AC-206A5E413D9E</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -139,21 +240,32 @@ echo -n "$alfred_script_status"</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argumenttype</key>
-				<integer>0</integer>
-				<key>keyword</key>
-				<string>li</string>
-				<key>subtext</key>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
+						<string></string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string></string>
+						<key>outputlabel</key>
+						<string>empty</string>
+						<key>uid</key>
+						<string>78C8DAA4-D603-45C4-8D26-4EE737E50FF1</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
 				<string></string>
-				<key>text</key>
-				<string>Create a new issue in Linear</string>
-				<key>withspace</key>
-				<true/>
+				<key>hideelse</key>
+				<false/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
+			<string>alfred.workflow.utility.conditional</string>
 			<key>uid</key>
-			<string>3B17DD17-7838-45DF-BD85-C392E29FAF08</string>
+			<string>10CCFAEE-35B2-440D-8585-6547E567BEDB</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -236,49 +348,80 @@ echo -n "$alfred_script_status"</string>
 
 ## Description
 
-Welcome to the wonderful world of entering Linear issues from the Alfred interface. Just enter your keyword (default is "li") and type in the title of the issue you'd like to create. At this time, the code is limited to just creating backlog items not assigned to specific projects for ease of use. 
+This Alfred workflow allows you to create backlog issues in Linear directly from Alfred. Simply enter the keyword (default is "li") followed by the issue title, and a new backlog issue will be created in your specified Linear team.
+
+## Prerequisites
+
+Before using this workflow, you'll need:
+
+1. A Linear account
+2. Your personal Linear API key
+3. The ID of the Linear team where you want to create issues
 
 ## Configuration
 
-Both your personal API key and team id are required. The instructions to set this up are as follows:
+### Obtaining Your API Key
 
-- API Key
-1. Navigate to https://linear.app/ and login to your Linear account
-3. Type "G" then "S". This will open your account settings
-4. Select API under "My Account" on the left
-5. Create a personal API key, naming it whatever you'd like. This will generate the API key you will enter in the workflow configuration.
+1. Log in to your Linear account at https://linear.app/
+2. Press "G" then "S" to open your account settings
+3. Select "API" under "My Account" on the left sidebar
+4. Create a new personal API key and name it as desired
 
-- Team ID
-1. While logged in to your Linear account, type "Cmd-k" and enter "UUID" in the popup window
+### Obtaining Your Team ID
+
+1. While logged in to Linear, press "Cmd + K" and enter "UUID" in the popup window
 2. Select "Developer: Copy Model UUID..."
-3. Type "team" and select the team name you would like your issues to go to. This will copy the ID you will enter in the workflow configuration.
+3. Type "team" and select the name of the team where you want to create issues
 
+After obtaining your API key and team ID, enter them in the respective fields in the workflow configuration.
 
 ## Usage
 
-The keyword to enter into Alfred is defaulted to "li". Feel free to change it by selecting the keyword object in the workflow.
-Just type "li" followed by the title of your issue and hit enter. Easy peasey. 
+The default keyword to trigger the workflow is "li". To create a new issue:
 
+1. Type "li" followed by a space
+2. Enter the title of the issue
+3. Press Enter
+
+The new issue will be created as a backlog item in the specified Linear team.
+
+## Customization
+
+You can change the keyword by selecting the "Keyword" object in the workflow.
 
 ## Contributing
 
-If you would like to contribute to this project, please follow these guidelines:
+Contributions are welcome! If you'd like to contribute, please follow these steps:
 
-1. Fork the repository.
-2. Create a new branch for your changes.
-3. Make your changes.
-4. Commit your changes.
-5. Push your changes to your forked repository.
-6. Submit a pull request.
+1. Fork the repository
+2. Create a new branch for your changes
+3. Make your changes
+4. Commit your changes
+5. Push your changes to your forked repository
+6. Submit a pull request
 
 Clone the repo with https://github.com/mattalexanderfields/Alfred_wf_Linear.git
 
 
 ## Contact
 
-If you have any questions, please contact me at theseapriest@gmail.com</string>
+If you have any questions or issues, please contact me at theseapriest@gmail.com</string>
 	<key>uidata</key>
 	<dict>
+		<key>10CCFAEE-35B2-440D-8585-6547E567BEDB</key>
+		<dict>
+			<key>xpos</key>
+			<real>220</real>
+			<key>ypos</key>
+			<real>270</real>
+		</dict>
+		<key>2B4B4C4B-91E6-40E8-9C54-02D44AA54A14</key>
+		<dict>
+			<key>xpos</key>
+			<real>370</real>
+			<key>ypos</key>
+			<real>105</real>
+		</dict>
 		<key>3B17DD17-7838-45DF-BD85-C392E29FAF08</key>
 		<dict>
 			<key>xpos</key>
@@ -289,37 +432,44 @@ If you have any questions, please contact me at theseapriest@gmail.com</string>
 		<key>4379A382-45DC-4CC5-84FC-32D98E93A95A</key>
 		<dict>
 			<key>xpos</key>
-			<real>585</real>
+			<real>945</real>
 			<key>ypos</key>
-			<real>250</real>
+			<real>255</real>
+		</dict>
+		<key>45D49E96-8CBA-4DBD-97AC-206A5E413D9E</key>
+		<dict>
+			<key>xpos</key>
+			<real>355</real>
+			<key>ypos</key>
+			<real>255</real>
 		</dict>
 		<key>751DCB00-1FBB-4F3D-91BE-DD6749B72F46</key>
 		<dict>
 			<key>xpos</key>
-			<real>580</real>
+			<real>940</real>
 			<key>ypos</key>
-			<real>380</real>
+			<real>385</real>
 		</dict>
 		<key>7D78555A-34C8-4100-A146-461AC2E0F2A8</key>
 		<dict>
 			<key>xpos</key>
-			<real>285</real>
+			<real>645</real>
 			<key>ypos</key>
-			<real>250</real>
+			<real>255</real>
 		</dict>
 		<key>8D095363-20D3-4FDB-8C97-BAEE3426E9E0</key>
 		<dict>
 			<key>xpos</key>
-			<real>210</real>
+			<real>575</real>
 			<key>ypos</key>
-			<real>280</real>
+			<real>285</real>
 		</dict>
 		<key>DB4AD685-8B6C-44E8-B0BA-6687CD550E5E</key>
 		<dict>
 			<key>xpos</key>
-			<real>455</real>
+			<real>815</real>
 			<key>ypos</key>
-			<real>270</real>
+			<real>275</real>
 		</dict>
 	</dict>
 	<key>userconfigurationconfig</key>
@@ -370,7 +520,7 @@ If you have any questions, please contact me at theseapriest@gmail.com</string>
 	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
-	<string>0.0.01</string>
+	<string>1.0.1</string>
 	<key>webaddress</key>
 	<string>https://github.com/mattalexanderfields</string>
 </dict>
